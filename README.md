@@ -10,7 +10,7 @@ addlicense requires go 1.16 or later.
 
 ## install
 
-    go install github.com/google/addlicense@latest
+    go install github.com/prepodavan/addlicense@latest
 
 ## usage
 
@@ -35,26 +35,26 @@ The simplest way to get the addlicense docker image is to pull from GitHub
 Container Registry:
 
 ```bash
-docker pull ghcr.io/google/addlicense:latest
+docker pull ghcr.io/prepodavan/addlicense:latest
 ```
 
 Alternately, you can build it from source yourself:
 
 ```bash
-docker build -t ghcr.io/google/addlicense .
+docker build -t ghcr.io/prepodavan/addlicense .
 ```
 
 Once you have the image, you can test that it works by running:
 
 ```bash
-docker run -it ghcr.io/google/addlicense -h
+docker run -it ghcr.io/prepodavan/addlicense -h
 ```
 
 Finally, to run it, mount the directory you want to scan to `/src` and pass the
 appropriate addlicense flags:
 
 ```bash
-docker run -it ghcr.io/google/addlicense -v ${PWD}:/src -c "Google LLC" *.go
+docker run -it ghcr.io/prepodavan/addlicense -v ${PWD}:/src -c "Google LLC" *.go
 ```
 
 ## license
